@@ -2,6 +2,7 @@ import Card from "../Components/Card"
 import {Routes, Route, Link} from "react-router-dom"
 import {consonants,vowels} from "../utils/characters.js"
 import {DisplayCharacter} from "../Pages/DisplayCharacter.js"
+
 export const LearnCharacters = () => {
 	const style = {
 		display: "flex",

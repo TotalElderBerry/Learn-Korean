@@ -7,47 +7,47 @@ export const consonants = [
 
     {
 		character: "ㄴ",
-		pronunciation: "k",
+		pronunciation: "n",
 		description: "Eiusmod esse in in sunt exercitation commodo anim eiusmod mollit exercitation nulla aliqua aute."
 	},
 	{
 		character: "ㄷ",
-		pronunciation: "k",
+		pronunciation: "d/t",
 		description: "Eiusmod esse in in sunt exercitation commodo anim eiusmod mollit exercitation nulla aliqua aute."
 	},
 	{
 		character: "ㄹ",
-		pronunciation: "k",
+		pronunciation: "r/l",
 		description: "Eiusmod esse in in sunt exercitation commodo anim eiusmod mollit exercitation nulla aliqua aute."
 	},
 	{
 		character: "ㅁ",
-		pronunciation: "k",
+		pronunciation: "m",
 		description: "Eiusmod esse in in sunt exercitation commodo anim eiusmod mollit exercitation nulla aliqua aute."
 	},
 	{
 		character: "ㅂ",
-		pronunciation: "k",
+		pronunciation: "p/b",
 		description: "Eiusmod esse in in sunt exercitation commodo anim eiusmod mollit exercitation nulla aliqua aute."
 	},
 	{
 		character: "ㅅ",
-		pronunciation: "k",
+		pronunciation: "s",
 		description: "Eiusmod esse in in sunt exercitation commodo anim eiusmod mollit exercitation nulla aliqua aute."
 	},
 	{
 		character: "ㅇ",
-		pronunciation: "k",
+		pronunciation: "ng",
 		description: "Eiusmod esse in in sunt exercitation commodo anim eiusmod mollit exercitation nulla aliqua aute."
 	},
 	{
 		character: "ㅈ",
-		pronunciation: "k",
+		pronunciation: "j",
 		description: "Eiusmod esse in in sunt exercitation commodo anim eiusmod mollit exercitation nulla aliqua aute."
 	},
 	{
 		character: "ㅊ",
-		pronunciation: "k",
+		pronunciation: "ch",
 		description: "Eiusmod esse in in sunt exercitation commodo anim eiusmod mollit exercitation nulla aliqua aute."
 	},
 	{
@@ -57,17 +57,17 @@ export const consonants = [
 	},
 	{
 		character: "ㅌ",
-		pronunciation: "k",
+		pronunciation: "t",
 		description: "Eiusmod esse in in sunt exercitation commodo anim eiusmod mollit exercitation nulla aliqua aute."
 	},
 	{
 		character: "ㅍ",
-		pronunciation: "k",
+		pronunciation: "p",
 		description: "Eiusmod esse in in sunt exercitation commodo anim eiusmod mollit exercitation nulla aliqua aute."
 	},
 	{
 		character: "ㅎ",
-		pronunciation: "k",
+		pronunciation: "h",
 		description: "Eiusmod esse in in sunt exercitation commodo anim eiusmod mollit exercitation nulla aliqua aute."
 	},
 ]
@@ -81,52 +81,54 @@ export const vowels = [
 
     {
 		character: "ㅑ",
-		pronunciation: "k",
+		pronunciation: "ya",
 		description: "Eiusmod esse in in sunt exercitation commodo anim eiusmod mollit exercitation nulla aliqua aute."
 	},
 	{
 		character: "ㅓ",
-		pronunciation: "k",
+		pronunciation: "eo",
 		description: "Eiusmod esse in in sunt exercitation commodo anim eiusmod mollit exercitation nulla aliqua aute."
 	},
 
     {
 		character: "ㅕ",
-		pronunciation: "k",
+		pronunciation: "yeo",
 		description: "Eiusmod esse in in sunt exercitation commodo anim eiusmod mollit exercitation nulla aliqua aute."
 	},
 	{
 		character: "ㅗ",
-		pronunciation: "k",
+		pronunciation: "o",
 		description: "Eiusmod esse in in sunt exercitation commodo anim eiusmod mollit exercitation nulla aliqua aute."
 	},
 
     {
 		character: "ㅛ",
-		pronunciation: "k",
+		pronunciation: "yo",
 		description: "Eiusmod esse in in sunt exercitation commodo anim eiusmod mollit exercitation nulla aliqua aute."
 	},
 	{
 		character: "ㅜ",
-		pronunciation: "k",
+		pronunciation: "oo",
 		description: "Eiusmod esse in in sunt exercitation commodo anim eiusmod mollit exercitation nulla aliqua aute."
 	},
 
     {
 		character: "ㅠ",
-		pronunciation: "k",
+		pronunciation: "yoo",
 		description: "Eiusmod esse in in sunt exercitation commodo anim eiusmod mollit exercitation nulla aliqua aute."
 	},
 	{
 		character: "ㅡ",
-		pronunciation: "k",
+		pronunciation: "eu",
 		description: "Eiusmod esse in in sunt exercitation commodo anim eiusmod mollit exercitation nulla aliqua aute."
 	},
 
     {
 		character: "ㅣ",
-		pronunciation: "k",
+		pronunciation: "ee/i",
 		description: "Eiusmod esse in in sunt exercitation commodo anim eiusmod mollit exercitation nulla aliqua aute."
 	},
 ]
 //["ㅏ","ㅑ","ㅓ","ㅕ","ㅗ","ㅛ","ㅜ","ㅠ","ㅡ","ㅣ"]
+
+export const letters = [...consonants,...vowels]

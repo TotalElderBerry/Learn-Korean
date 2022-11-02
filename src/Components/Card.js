@@ -1,15 +1,27 @@
 import React from 'react'
 
 
-
 const Card = ({letter,color,size,hoverable}) => {
-	
+	const getSize = () => {
+    switch(size){
+      case "large": return "250px"
+      case "small": return "50px"
+      default: return "100px"
+    }
+  }
+  const getColor = () => {
+    switch(color){
+      case "red": return "DodgerBlue"
+      case "pink": return "red"
+      default: return "#dc3a44"
+    }
+  }
 	const cardstyle = {
       color: "white",
-      backgroundColor: color === "red"?"DodgerBlue":"#dc3a44",
+      backgroundColor: getColor(),
       fontFamily: "Arial",
-      width: size === "large"?"250px":"100px",
-      height: size === "large"?"250px":"100px",
+      width: getSize(),
+      height: getSize(),
       borderRadius: "10px",
       display: "flex",
       justifyContent: "center",

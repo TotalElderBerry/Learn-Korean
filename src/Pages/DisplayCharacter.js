@@ -1,13 +1,12 @@
 import Card from "../Components/Card"
 import React, {useState} from "react"
-import {consonants,vowels} from "../utils/characters.js"
+import {consonants,vowels,letters} from "../utils/characters.js"
 import { useLocation } from 'react-router-dom'
+import DisplayCards from "../Components/DisplayCards"
 
 export const DisplayCharacter = () => {
 	const location = useLocation()
 	const [character,setCharacter] = useState(location.state.id)
-	console.log(location)
-	const letters = [...consonants,...vowels]
 	const clickNext = () => {
 		setCharacter(character => (letters.length - 1=== character)? letters.length - 1:character + 1)
 	}
@@ -43,6 +42,10 @@ export const DisplayCharacter = () => {
 		alignItems: "center",
 		margin: "0px 10px"
 	}
+	const cards = {
+		position: "relative",
+		margin: "0"
+	}
 	return (
 		<div style={parentStyle}> 
 			<section style={style}>
@@ -55,6 +58,9 @@ export const DisplayCharacter = () => {
 			<div className="lead" style={description}>
 				<p>{letters[character].description}</p>
 			</div>
+			</section>
+			<section style = {cards}>
+			<DisplayCards highlighted={character}/>
 			</section>
 		</div>
 	)
