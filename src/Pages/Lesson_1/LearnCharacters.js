@@ -1,6 +1,6 @@
 import Card from "../../Components/Card"
 import {Routes, Route, Link} from "react-router-dom"
-import {consonants,vowels} from "../../utils/characters.js"
+import {consonants,vowels,diphtongs,letters} from "../../utils/characters.js"
 import {DisplayCharacter} from "./DisplayCharacter.js"
 
 export const LearnCharacters = () => {
@@ -15,8 +15,7 @@ export const LearnCharacters = () => {
 		border: "none",
 		background: "none",
 	};
-	const tempLetters = [...consonants,...vowels]
-	const getIndex = (item) => tempLetters.indexOf(item);
+	const getIndex = (item) => letters.indexOf(item);
 	
 	return (
 		<div>
@@ -50,6 +49,21 @@ export const LearnCharacters = () => {
 				</div>
 			</div>
 			
+			<div style={group}>
+				<h5 className="display-4">Diphtongs</h5>
+				<div style={style}>
+					{diphtongs.map((ll,idx)=>{
+						return (
+							// <button style={card} key={idx} onClick={(e)=>console.log(getIndex(ll))}>
+								<Link key={idx} style={{ textDecoration: 'none' }} to={'/characters'} state={{ id: getIndex(ll) }} >
+								<Card letter={ll} size="medium" />
+								</Link>
+							// </button>
+						)
+					})
+					}
+				</div>
+			</div>
 		</div>
 	)
 }

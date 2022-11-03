@@ -15,8 +15,7 @@ export const DisplayCharacter = () => {
 		setCharacter(character => (character === 0)? 0:character - 1)
 	}
 
-	const isVowel = () => vowels.includes(letters[character])?true:false;
-
+	console.log(letters)
 	const style = {
 		display: "flex",
 		flexFlow: "column",

@@ -7,7 +7,7 @@ const Card = ({letter,highlighted,size,hoverable}) => {
       case "large": return "250px"
       case "medium": return "75px"
       case "small": return "50px"
-      default: return "100px"
+      default: return "110px"
     }
   }
   const getColor = () => {

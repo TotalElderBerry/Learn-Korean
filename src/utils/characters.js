@@ -133,6 +133,64 @@ export const vowels = [
 
 //["ㅏ","ㅑ","ㅓ","ㅕ","ㅗ","ㅛ","ㅜ","ㅠ","ㅡ","ㅣ"]
 
+export const diphtongs = [
+	{
+		character: "ㅐ",
+		pronunciation: "ee/i",
+		description: "Eiusmod esse in in sunt exercitation commodo anim eiusmod mollit exercitation nulla aliqua aute."
+	},	
+	{
+		character: "ㅔ",
+		pronunciation: "ee/i",
+		description: "Eiusmod esse in in sunt exercitation commodo anim eiusmod mollit exercitation nulla aliqua aute."
+	},
+	{
+		character: "ㅟ",
+		pronunciation: "ee/i",
+		description: "Eiusmod esse in in sunt exercitation commodo anim eiusmod mollit exercitation nulla aliqua aute."
+	},
+	{
+		character: "ㅝ",
+		pronunciation: "ee/i",
+		description: "Eiusmod esse in in sunt exercitation commodo anim eiusmod mollit exercitation nulla aliqua aute."
+	},
+	{
+		character: "ㅚ",
+		pronunciation: "ee/i",
+		description: "Eiusmod esse in in sunt exercitation commodo anim eiusmod mollit exercitation nulla aliqua aute."
+	},
+	{
+		character: "ㅘ",
+		pronunciation: "ee/i",
+		description: "Eiusmod esse in in sunt exercitation commodo anim eiusmod mollit exercitation nulla aliqua aute."
+	},
+	{
+		character: "ㅢ",
+		pronunciation: "ee/i",
+		description: "Eiusmod esse in in sunt exercitation commodo anim eiusmod mollit exercitation nulla aliqua aute."
+	},
+	{
+		character: "예",
+		pronunciation: "ee/i",
+		description: "Eiusmod esse in in sunt exercitation commodo anim eiusmod mollit exercitation nulla aliqua aute."
+	},
+	{
+		character: "ㅒ",
+		pronunciation: "ee/i",
+		description: "Eiusmod esse in in sunt exercitation commodo anim eiusmod mollit exercitation nulla aliqua aute."
+	},
+	{
+		character: "ㅙ",
+		pronunciation: "ee/i",
+		description: "Eiusmod esse in in sunt exercitation commodo anim eiusmod mollit exercitation nulla aliqua aute."
+	},
+	{
+		character: "ㅞ",
+		pronunciation: "ee/i",
+		description: "Eiusmod esse in in sunt exercitation commodo anim eiusmod mollit exercitation nulla aliqua aute."
+	},
+]
+
 const addProperty = (chars,typ) => {
 	chars.forEach(function (element) {
 	  element.type = typ;
@@ -141,5 +199,4 @@ const addProperty = (chars,typ) => {
 
 addProperty(vowels,"vowel")
 addProperty(consonants,"consonant")
-console.log(vowels[1].type)
-export const letters = [...consonants,...vowels]
+export const letters = [...consonants,...vowels,...diphtongs]
