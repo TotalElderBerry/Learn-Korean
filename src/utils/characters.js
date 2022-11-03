@@ -129,6 +129,17 @@ export const vowels = [
 		description: "Eiusmod esse in in sunt exercitation commodo anim eiusmod mollit exercitation nulla aliqua aute."
 	},
 ]
+
+
 //["ㅏ","ㅑ","ㅓ","ㅕ","ㅗ","ㅛ","ㅜ","ㅠ","ㅡ","ㅣ"]
 
+const addProperty = (chars,typ) => {
+	chars.forEach(function (element) {
+	  element.type = typ;
+	});
+}
+
+addProperty(vowels,"vowel")
+addProperty(consonants,"consonant")
+console.log(vowels[1].type)
 export const letters = [...consonants,...vowels]

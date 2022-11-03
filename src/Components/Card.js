@@ -1,21 +1,24 @@
 import React from 'react'
 
 
-const Card = ({letter,color,size,hoverable}) => {
+const Card = ({letter,highlighted,size,hoverable}) => {
 	const getSize = () => {
     switch(size){
       case "large": return "250px"
+      case "medium": return "75px"
       case "small": return "50px"
       default: return "100px"
     }
   }
   const getColor = () => {
-    switch(color){
-      case "red": return "DodgerBlue"
-      case "pink": return "red"
+    if(highlighted === "true") return "pink"
+    switch(letter.type){
+      case "vowel": return "DodgerBlue"
+      case "consonant": return "#dc3a44"
       default: return "#dc3a44"
     }
   }
+  console.log(highlighted)
 	const cardstyle = {
       color: "white",
       backgroundColor: getColor(),

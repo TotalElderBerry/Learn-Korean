@@ -1,7 +1,7 @@
-import Card from "../Components/Card"
+import Card from "../../Components/Card"
 import {Routes, Route, Link} from "react-router-dom"
-import {consonants,vowels} from "../utils/characters.js"
-import {DisplayCharacter} from "../Pages/DisplayCharacter.js"
+import {consonants,vowels} from "../../utils/characters.js"
+import {DisplayCharacter} from "./DisplayCharacter.js"
 
 export const LearnCharacters = () => {
 	const style = {
@@ -26,7 +26,7 @@ export const LearnCharacters = () => {
 					{consonants.map((ll,idx)=>{
 						return (
 							<Link key={idx} style={{ textDecoration: 'none' }} to={'/characters'} state={{ id: getIndex(ll) }} >
-								<Card letter={ll} />
+								<Card letter={ll} size="medium" />
 							</Link>
 						)
 					})
@@ -41,7 +41,7 @@ export const LearnCharacters = () => {
 						return (
 							// <button style={card} key={idx} onClick={(e)=>console.log(getIndex(ll))}>
 								<Link key={idx} style={{ textDecoration: 'none' }} to={'/characters'} state={{ id: getIndex(ll) }} >
-								<Card letter={ll} color="red" />
+								<Card letter={ll} size="medium" />
 								</Link>
 							// </button>
 						)

@@ -6,8 +6,8 @@ import {
   Link
 } from 'react-router-dom';
 
-import {DisplayCharacter} from './Pages/DisplayCharacter'
-import {LearnCharacters} from './Pages/LearnCharacters'
+import {DisplayCharacter} from './Pages/Lesson_1/DisplayCharacter'
+import {LearnCharacters} from './Pages/Lesson_1/LearnCharacters'
 function App() {
   return (
     <div className="App">

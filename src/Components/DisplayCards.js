@@ -14,7 +14,7 @@
 			{letters.map((l,idx)=>{
 				return (
 					<div key={idx}>
-					<Card letter={l} size="small" color={(highlighted === idx)?"pink":"red"}/>
+					<Card letter={l} size="small" highlighted={(highlighted === idx)?"true":"false"}/>
 					</div>
 				)
 			})}

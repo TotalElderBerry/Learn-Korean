@@ -1,8 +1,8 @@
-import Card from "../Components/Card"
+import Card from "../../Components/Card"
 import React, {useState} from "react"
-import {consonants,vowels,letters} from "../utils/characters.js"
+import {consonants,vowels,letters} from "../../utils/characters.js"
 import { useLocation } from 'react-router-dom'
-import DisplayCards from "../Components/DisplayCards"
+import DisplayCards from "../../Components/DisplayCards"
 
 export const DisplayCharacter = () => {
 	const location = useLocation()
@@ -51,7 +51,7 @@ export const DisplayCharacter = () => {
 			<section style={style}>
 			<div style={cardContainer}>
 				<button style={buttonStyle} className="btn btn-outline-dark btn-lg" onClick={clickPrevious}>⇦</button>
-				<Card letter={letters[character]} color={isVowel()?"red":""} size="large" hoverable="false"/>
+				<Card letter={letters[character]} size="large" hoverable="false"/>
 				<button style={buttonStyle} className="btn btn-dark btn-lg" onClick={clickNext}>⇨</button>
 			</div>
 			<div className="lead" style={pro}>Pronunciation: {letters[character].pronunciation}</div>
