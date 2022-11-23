@@ -9,6 +9,7 @@ import {
 import {DisplayCharacter} from './Pages/Lesson_1/DisplayCharacter'
 import {LearnCharacters} from './Pages/Lesson_1/LearnCharacters'
 import {AlphabetQuiz} from "./Pages/Lesson_1/Quizzes/AlphabetQuiz" 
+import CardPicture from './Components/CardPicture';
 function App() {
   return (
     <div className="App">
@@ -17,6 +18,7 @@ function App() {
         <Route path ="/" element={<LearnCharacters/>} />
         <Route path ="/characters" element={<DisplayCharacter />} />
         <Route path ="/lesson_1/quiz" element={<AlphabetQuiz />} />
+        <Route path ="/lesson_1/vocab" element={<CardPicture />} />
       </Routes>
     </Router>
     </div>

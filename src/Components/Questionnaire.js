@@ -1,6 +1,7 @@
 import Card from "./Card.js"
 import Choice from "./Choice.js"
 import QuizBanner from "./QuizBanner.js"
+import MyProgressBar from "./MyProgressBar.js"
 import {consonants,vowels,letters} from "../utils/characters.js"
 import React, {useState, useEffect} from "react"
 export const Questionnaire = () => {
@@ -11,12 +12,17 @@ export const Questionnaire = () => {
 	const [isLoading,setLoading] = useState(true)
 	const [toShow,setShow] = useState()
 	const [items,setItems] = useState()
+	const [score,setScore] = useState(0)
+	const [isDone,setIsDone] = useState(false)
+	const [message,setMessage] = useState("Loading")
+	const [count,setCount] = useState(0)
 	// let items = []
 	const style = {
 		display: "flex",
 		alignItems: "center",
 		justifyContent: "center",
-		flexDirection: "column"
+		flexDirection: "column",
+		marginBottom: "20px"
 	}
 
 	const parentstyle = {
@@ -33,18 +39,17 @@ export const Questionnaire = () => {
 
 	const checkAnswer = () => {
 		if(choices[selectedChoice].pronunciation !== question.pronunciation) return false
+		
+		setScore(p => p+1)
 		return true;
 	}
 
 	useEffect(()=>{
 		generateQuestions(6).then((v) => {
 			setItems(v)
-			console.log("inside useeffect");
-			console.log(items);
 			
 			setLoading(false)
 		})
-		console.log(items);
 	},[])
 	
 	const generateQuestions = async (n) => {
@@ -60,6 +65,7 @@ export const Questionnaire = () => {
 		}
 		const newindex = Math.floor(Math.random() * questions.length)
 		const q = questions[newindex];
+		questions.splice(newindex,1)
 		setQuestion(q)
 		setChoices(generateChoices(q))
 		return questions
@@ -91,6 +97,7 @@ export const Questionnaire = () => {
 	const handleSubmit = (e) => {
 		e.preventDefault()
 		if(selectedChoice != -1){
+			setCount(p => p+1)
 			setIsCorrect(checkAnswer())
 			setShow(true)
 			setTimeout(()=>{
@@ -103,6 +110,9 @@ export const Questionnaire = () => {
 					setQuestion(q)
 					setSelectedChoice(-1)
 					setShow(false)
+				}else{
+					setIsDone(true)
+					setMessage("Done and your score is " + score)
 				}
 			},1500)	
 		}
@@ -188,12 +198,12 @@ export const Questionnaire = () => {
 		<>
 		{console.log("dom")}
 		{
-				toShow?
+				toShow && !isDone?
 					<QuizBanner isCorrect={isCorrect}/>
 				: <></>
-			}
+		}
 		<div className="container" style={parentstyle}>
-			{isLoading === true?<p>Loading</p>:
+			{isLoading === true || isDone === true?<p>{message}</p>:
 			<article style={style}>
 				<section className="row">
 					<Card letter={question}/>
@@ -212,7 +222,7 @@ export const Questionnaire = () => {
 				</section>
 			</article>	
 			}
-			
+			<MyProgressBar p={count*20} />
 		</div>
 		</>
 	)
