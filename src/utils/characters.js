@@ -136,57 +136,57 @@ export const vowels = [
 export const diphtongs = [
 	{
 		character: "ㅐ",
-		pronunciation: "ee/i",
+		pronunciation: "ae",
 		description: "Eiusmod esse in in sunt exercitation commodo anim eiusmod mollit exercitation nulla aliqua aute."
 	},	
 	{
 		character: "ㅔ",
-		pronunciation: "ee/i",
+		pronunciation: "ae",
 		description: "Eiusmod esse in in sunt exercitation commodo anim eiusmod mollit exercitation nulla aliqua aute."
 	},
 	{
 		character: "ㅟ",
-		pronunciation: "ee/i",
+		pronunciation: "wi",
 		description: "Eiusmod esse in in sunt exercitation commodo anim eiusmod mollit exercitation nulla aliqua aute."
 	},
 	{
 		character: "ㅝ",
-		pronunciation: "ee/i",
+		pronunciation: "wo",
 		description: "Eiusmod esse in in sunt exercitation commodo anim eiusmod mollit exercitation nulla aliqua aute."
 	},
 	{
 		character: "ㅚ",
-		pronunciation: "ee/i",
+		pronunciation: "oe",
 		description: "Eiusmod esse in in sunt exercitation commodo anim eiusmod mollit exercitation nulla aliqua aute."
 	},
 	{
 		character: "ㅘ",
-		pronunciation: "ee/i",
+		pronunciation: "wa",
 		description: "Eiusmod esse in in sunt exercitation commodo anim eiusmod mollit exercitation nulla aliqua aute."
 	},
 	{
 		character: "ㅢ",
-		pronunciation: "ee/i",
+		pronunciation: "ui",
 		description: "Eiusmod esse in in sunt exercitation commodo anim eiusmod mollit exercitation nulla aliqua aute."
 	},
 	{
 		character: "예",
-		pronunciation: "ee/i",
+		pronunciation: "ye",
 		description: "Eiusmod esse in in sunt exercitation commodo anim eiusmod mollit exercitation nulla aliqua aute."
 	},
 	{
 		character: "ㅒ",
-		pronunciation: "ee/i",
+		pronunciation: "yae",
 		description: "Eiusmod esse in in sunt exercitation commodo anim eiusmod mollit exercitation nulla aliqua aute."
 	},
 	{
 		character: "ㅙ",
-		pronunciation: "ee/i",
+		pronunciation: "wae",
 		description: "Eiusmod esse in in sunt exercitation commodo anim eiusmod mollit exercitation nulla aliqua aute."
 	},
 	{
 		character: "ㅞ",
-		pronunciation: "ee/i",
+		pronunciation: "we",
 		description: "Eiusmod esse in in sunt exercitation commodo anim eiusmod mollit exercitation nulla aliqua aute."
 	},
 ]

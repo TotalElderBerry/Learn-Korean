@@ -18,7 +18,6 @@ const Card = ({letter,highlighted,size,hoverable}) => {
       default: return "#dc3a44"
     }
   }
-  console.log(highlighted)
 	const cardstyle = {
       color: "white",
       backgroundColor: getColor(),

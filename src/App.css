@@ -1,3 +1,7 @@
 .btnHover:hover{
 	transform: scale(1.1);
 }
+
+.alert{
+	margin: 10px;
+}
