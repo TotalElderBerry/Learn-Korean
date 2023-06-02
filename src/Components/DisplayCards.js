@@ -1,4 +1,5 @@
- import {consonants,vowels,letters} from "../utils/characters.js"
+ import { Link } from "react-router-dom"
+import {consonants,vowels,letters} from "../utils/characters.js"
  import Card from "./Card.js"
 
 
@@ -14,7 +15,9 @@
 			{letters.map((l,idx)=>{
 				return (
 					<div key={idx}>
-					<Card letter={l} size="small" highlighted={(highlighted === idx)?"true":"false"}/>
+						<Link style={{textDecoration: "none"}} to={`/character/${l.character}`}>
+							<Card letter={l} size="small" highlighted={(highlighted === idx)?"true":"false"}/>
+						</Link>
 					</div>
 				)
 			})}

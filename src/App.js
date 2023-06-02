@@ -8,6 +8,7 @@ import {
 
 import {DisplayCharacter} from './Pages/Lesson_1/DisplayCharacter'
 import {LearnCharacters} from './Pages/Lesson_1/LearnCharacters'
+import LearnCharacter from './Pages/Lesson_1/LearnCharacter';
 function App() {
   return (
     <div className="App">
@@ -15,6 +16,7 @@ function App() {
       <Routes>
         <Route path ="/" element={<LearnCharacters/>} />
         <Route path ="/characters" element={<DisplayCharacter />} />
+        <Route path ="/character/:letter" element={<LearnCharacter />} />
       </Routes>
     </Router>
     </div>

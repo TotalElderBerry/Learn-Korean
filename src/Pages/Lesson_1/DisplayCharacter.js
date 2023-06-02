@@ -6,7 +6,8 @@ import DisplayCards from "../../Components/DisplayCards"
 
 export const DisplayCharacter = () => {
 	const location = useLocation()
-	const [character,setCharacter] = useState(location.state.id)
+	console.log(location);
+	const [character,setCharacter] = useState(location.state != null?location.state.id:0)
 	const clickNext = () => {
 		setCharacter(character => (letters.length - 1=== character)? letters.length - 1:character + 1)
 	}
